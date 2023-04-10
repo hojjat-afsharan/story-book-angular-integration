@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TaskStateEnum } from 'src/app/task-state.enum';
 
 @Component({
   selector: 'app-task',
@@ -7,13 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TaskComponent {
 
+  public TaskStateEnum = TaskStateEnum;
+
   @Input() task: any;
 
-  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onPinTask = new EventEmitter<Event>();
 
-  // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
 

@@ -1,0 +1,5 @@
+export enum TaskStateEnum{
+  TASK_PINNED = 'TASK_PINNED',
+  TASK_ARCHIVED = 'TASK_ARCHIVED',
+  TASK_INBOX = 'TASK_INBOX'
+}

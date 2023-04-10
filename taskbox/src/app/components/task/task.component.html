@@ -7,7 +7,7 @@
     <input
       type="checkbox"
       disabled="true"
-      [defaultChecked]="task?.state === 'TASK_ARCHIVED'"
+      [defaultChecked]="task?.state === TaskStateEnum.TASK_ARCHIVED"
       name="checked-{{ task?.id }}"
       id="checked-{{ task?.id }}"
     />
@@ -28,7 +28,7 @@
     />
   </label>
   <button
-    *ngIf="task?.state !== 'TASK_ARCHIVED'"
+    *ngIf="task?.state !== TaskStateEnum.TASK_ARCHIVED"
     class="pin-button"
     [attr.aria-label]="'pinTask-' + task.id"
     (click)="onPin(task.id)"

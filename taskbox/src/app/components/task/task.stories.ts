@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
 import { TaskComponent } from './task.component';
+import { TaskStateEnum } from 'src/app/task-state.enum';
 
 export default {
   component: TaskComponent,
@@ -26,7 +27,7 @@ Default.args = {
   task: {
     id: '1',
     title: 'Test Task',
-    state: 'TASK_INBOX'
+    state: TaskStateEnum.TASK_INBOX
   },
 };
 
@@ -34,7 +35,7 @@ export const Pinned = Template.bind({});
 Pinned.args = {
   task: {
     ...Default.args['task'],
-    state: 'TASK_PINNED',
+    state: TaskStateEnum.TASK_PINNED,
   },
 };
 
@@ -42,6 +43,6 @@ export const Archived = Template.bind({});
 Archived.args = {
   task: {
     ...Default.args['task'],
-    state: 'TASK_ARCHIVED'
+    state: TaskStateEnum.TASK_ARCHIVED
   },
 };
